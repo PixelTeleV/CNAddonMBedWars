@@ -1,0 +1,8 @@
+name: CNAddonMBW
+version: R1.0
+author: PixelTeleV
+
+main: ch.pixeltv.main.Main
+
+commands:
+  cloudstate:
