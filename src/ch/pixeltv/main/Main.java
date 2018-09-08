@@ -17,7 +17,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
     //Version String
-    public static String version = "Release 1.0";
+    public static String version = "Release 1.2";
 
     public void onEnable() {
 

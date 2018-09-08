@@ -2,6 +2,9 @@ package ch.pixeltv.commands;
 
 import ch.pixeltv.main.Main;
 import ch.pixeltv.util.Fileconfig;
+import de.dytanic.cloudnet.bridge.CloudServer;
+import de.dytanic.cloudnet.lib.server.ServerState;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -27,10 +30,28 @@ public class CloudStateCMD implements CommandExecutor {
                     if (p.hasPermission("System.CloudState.Reload")) {
                         Fileconfig.loadMessages();
                         Fileconfig.initMessages();
+                    } else {
+                        p.sendMessage(Fileconfig.nopermission);
                     }
                     p.sendMessage(Fileconfig.reloaded);
+                } else if(args[0].equalsIgnoreCase("change")) {
+                    if(p.hasPermission("System.CloudState.ChangeVC")) {
+                        CloudServer.getInstance().setServerStateAndUpdate(ServerState.INGAME);
+                        CloudServer.getInstance().changeToIngame();
+
+                        //Send Message in Console when CloudState changed
+                        Bukkit.getConsoleSender().sendMessage(Fileconfig.cmessage);
+
+                        //Send Message to all Players with specific permissions
+                        for(Player pl : Bukkit.getOnlinePlayers()) {
+                            if(pl.hasPermission("System.CSMessage")) {
+                                pl.sendMessage(Fileconfig.message);
+                            }
+                        }
+                        p.sendMessage(Fileconfig.cvcmessage);
+                    }
                 } else {
-                    p.sendMessage(Fileconfig.nopermission);
+                    p.sendMessage(Fileconfig.syntax);
                 }
             }
         }
