@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="bedwars">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/bedwars.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../bedwars.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -12,8 +12,8 @@ import org.bukkit.entity.Player;
 
 /**
  * Coded by PixelTeleV
- * 05.09.18
- * Copyright PixelTeleV 2018.
+ * 26.02.19
+ * Copyright PixelTeleV 2019.
  * Decompiling is strictly forbidden!
  * Coded with Intellij
  */
@@ -24,7 +24,7 @@ public class CloudStateCMD implements CommandExecutor {
 
         if(cmd.getName().equalsIgnoreCase("cloudstate")) {
             if (args.length == 0) {
-                p.sendMessage("§eCloudState Plugin §7coded by §aPixelTeleV§7! §9Version: " + Main.version);
+                p.sendMessage("§eCloudState Plugin §7coded by §aPixelTeleV§7! §9Version: " + Main.version + " §eDownload on SpigotMC.org!");
             } else if (args.length == 1) {
                 if (args[0].equalsIgnoreCase("reload")) {
                     if (p.hasPermission("System.CloudState.Reload")) {
@@ -35,7 +35,7 @@ public class CloudStateCMD implements CommandExecutor {
                     }
                     p.sendMessage(Fileconfig.reloaded);
                 } else if(args[0].equalsIgnoreCase("change")) {
-                    if(p.hasPermission("System.CloudState.ChangeVC")) {
+                    if(p.hasPermission("System.CloudState.ChangeState")) {
                         CloudServer.getInstance().setServerStateAndUpdate(ServerState.INGAME);
                         CloudServer.getInstance().changeToIngame();
 
@@ -44,7 +44,7 @@ public class CloudStateCMD implements CommandExecutor {
 
                         //Send Message to all Players with specific permissions
                         for(Player pl : Bukkit.getOnlinePlayers()) {
-                            if(pl.hasPermission("System.CSMessage")) {
+                            if(pl.hasPermission("System.CloudState.Message")) {
                                 pl.sendMessage(Fileconfig.message);
                             }
                         }

@@ -9,15 +9,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * Coded by PixelTeleV
- * 05.09.18
- * Copyright PixelTeleV 2018.
+ * 26.02.19
+ * Copyright PixelTeleV 2019.
  * Decompiling is strictly forbidden!
  * Coded with Intellij
  */
 public class Main extends JavaPlugin {
 
     //Version String
-    public static String version = "Release 1.2";
+    public static String version = "Release 1.4";
 
     public void onEnable() {
 
@@ -30,7 +30,7 @@ public class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("§7Plugin: §aCloudState");
         Bukkit.getConsoleSender().sendMessage("§7Author: §aPixelTeleV");
         Bukkit.getConsoleSender().sendMessage("§7Version: §a" + version);
-        Bukkit.getConsoleSender().sendMessage("§4§lCopyright PixelTeleV 2018");
+        Bukkit.getConsoleSender().sendMessage("§4§lCopyright PixelTeleV 2019");
         Bukkit.getConsoleSender().sendMessage("§a§lPlugin activated!");
         Bukkit.getConsoleSender().sendMessage("§b§m------------------");
 
@@ -50,7 +50,7 @@ public class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("§7Plugin: §aCloudState");
         Bukkit.getConsoleSender().sendMessage("§7Author: §aPixelTeleV");
         Bukkit.getConsoleSender().sendMessage("§7Version: §a" + version);
-        Bukkit.getConsoleSender().sendMessage("§4§lCopyright PixelTeleV 2018");
+        Bukkit.getConsoleSender().sendMessage("§4§lCopyright PixelTeleV 2019");
         Bukkit.getConsoleSender().sendMessage("§c§lPlugin deactivated!");
         Bukkit.getConsoleSender().sendMessage("§b§m------------------");
     }

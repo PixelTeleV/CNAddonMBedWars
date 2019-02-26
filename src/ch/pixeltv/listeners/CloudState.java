@@ -11,8 +11,8 @@ import org.bukkit.event.Listener;
 
 /**
  * Coded by PixelTeleV
- * 05.09.18
- * Copyright PixelTeleV 2018.
+ * 26.02.19
+ * Copyright PixelTeleV 2019.
  * Decompiling is strictly forbidden!
  * Coded with Intellij
  */
